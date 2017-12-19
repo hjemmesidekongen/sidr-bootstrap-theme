@@ -68,6 +68,18 @@
   flex-grow: 1;
 }
 
+// What, why this?
+// --------------------------------------------------------------------------------
+// Well... sidr is via jQuery inlining position absolute on the .sidr-open, when
+// toggling the sidr.
+// This makes the sidr scrollable from side-to-side. Try uncommenting the following
+// and open the left sidr (only an issue on the left sidr) on your phone.
+// You can then slide the body wrapper from right to left underneath the sidr.
+// Overflow:hidden on body does not work.
+.sidr-main-open {
+    position: fixed !important;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
